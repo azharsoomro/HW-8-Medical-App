@@ -287,61 +287,7 @@ The system tracks comprehensive AI telemetry:
 - **AI Engine:** Anthropic Claude Sonnet 4
 - **Language:** Python 3.8+
 
-## 📝 Assignment Requirements Checklist
 
-- ✅ **CSV Patient Data Files (25 pts)**
-  - Patient 1: Sepsis deterioration
-  - Patient 2: V-Tach arrhythmia
-  - Patient 3: Respiratory failure
-  - 60 minutes of minute-by-minute data
-  - All required columns present
-
-- ✅ **Working App with Diagnosis (25 pts)**
-  - Reads CSV files
-  - Shows accurate diagnosis
-  - Real-time vital signs display
-  - Critical alert detection
-
-- ✅ **Agentic AI Actions (25 pts)**
-  - AI-powered nursing recommendations
-  - Evidence-based interventions
-  - Dynamic action generation
-  - Not pre-programmed responses
-
-- ✅ **Creativity & Demo (15 pts)**
-  - Medical-grade UI/UX
-  - Interactive visualizations
-  - Alert system with audio
-  - Professional styling
-
-- ✅ **AI Observability (5 pts)**
-  - Token usage tracking
-  - Latency monitoring
-  - Detailed telemetry dashboard
-
-- ✅ **AI Architecture Diagram (5 pts)**
-  - Comprehensive workflow diagram
-  - All system components shown
-  - Clear data flow visualization
-
-## 🎥 Demo Video
-
-**Demo Features:**
-1. Upload patient CSV file
-2. View real-time vital signs
-3. Critical alert demonstration
-4. AI clinical assessment
-5. Agentic nursing actions
-6. Trend visualization
-7. AI telemetry dashboard
-
-## 🤝 Contributing
-
-Contributions welcome! Please ensure:
-- Code follows medical safety standards
-- AI prompts are clinically appropriate
-- Test with sample patient data
-- Document any new features
 
 ## 📄 License
 
@@ -367,11 +313,7 @@ For issues or questions:
 3. Verify API key configuration
 4. Check system requirements
 
-## 📞 Contact
 
-For assignment-related questions, contact your instructor.
-
----
 
 **Built with ❤️ for ICU Patient Safety**
 
