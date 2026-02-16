@@ -1,0 +1,96 @@
+graph TB
+    subgraph "Data Input Layer"
+        A[Patient CSV Upload] --> B[Data Validation]
+        B --> C[Pandas DataFrame]
+    end
+    
+    subgraph "Real-time Monitoring Layer"
+        C --> D[Latest Vitals Extraction]
+        C --> E[Historical Trend Analysis]
+        D --> F{Rule-Based<br/>Critical Alert<br/>System}
+        E --> F
+    end
+    
+    subgraph "AI Analysis Layer"
+        F --> G[Prepare Clinical Context]
+        G --> H[Anthropic Claude API<br/>Sonnet 4]
+        
+        H --> I[AI Clinical Assessment]
+        H --> J[AI Nursing Actions<br/>Agentic Recommendations]
+        
+        I --> K[Diagnosis & Risk Analysis]
+        J --> L[Evidence-Based Interventions]
+    end
+    
+    subgraph "Alert Classification"
+        F -->|Heart Rate < 40 or > 150| M[CRITICAL Alert]
+        F -->|SpO2 < 85| M
+        F -->|BP Systolic < 80| M
+        F -->|Temp > 39.5°C or < 35°C| M
+        F -->|ECG > 2.0| M
+        
+        F -->|Heart Rate 50-60 or 100-130| N[WARNING Alert]
+        F -->|SpO2 90-95| N
+        F -->|BP Systolic 90-100| N
+        F -->|Temp 38.5-39.5°C| N
+        
+        F -->|All Normal| O[STABLE Status]
+    end
+    
+    subgraph "AI Observability Layer"
+        H --> P[Telemetry Tracker]
+        P --> Q[Input/Output Tokens]
+        P --> R[API Latency ms]
+        P --> S[Model Version]
+        P --> T[Request Purpose]
+        
+        Q --> U[Observability Dashboard]
+        R --> U
+        S --> U
+        T --> U
+    end
+    
+    subgraph "Visualization Layer"
+        D --> V[Current Vitals Display]
+        E --> W[Plotly Interactive Charts]
+        W --> X[Multi-panel Time Series]
+        X --> Y[Heart Rate Trends]
+        X --> Z[SpO2 Trends]
+        X --> AA[BP Trends]
+        X --> AB[Temperature Trends]
+        X --> AC[ECG Trends]
+    end
+    
+    subgraph "User Interface Layer"
+        M --> AD[🚨 Critical Alert Banner<br/>Red Flashing + Audio]
+        N --> AE[⚠️ Warning Banner<br/>Orange]
+        O --> AF[✅ Stable Banner<br/>Green]
+        
+        K --> AG[Clinical Assessment Panel]
+        L --> AH[Nursing Action Panel]
+        V --> AI[Metrics Dashboard]
+        W --> AJ[Trend Visualization]
+        U --> AK[AI Telemetry Panel]
+    end
+    
+    subgraph "Decision Support Output"
+        AD --> AL[ICU Nurse Alert]
+        AE --> AL
+        AF --> AL
+        AH --> AM[Actionable Interventions]
+        AM --> AN[1. Immediate Actions]
+        AM --> AO[2. Monitoring Requirements]
+        AM --> AP[3. Notification Protocol]
+        AM --> AQ[4. Medication Considerations]
+        AM --> AR[5. Equipment Preparation]
+    end
+    
+    style M fill:#dc2626,stroke:#991b1b,color:#fff
+    style N fill:#f59e0b,stroke:#d97706,color:#fff
+    style O fill:#10b981,stroke:#059669,color:#fff
+    style H fill:#3b82f6,stroke:#1e40af,color:#fff
+    style AD fill:#dc2626,stroke:#991b1b,color:#fff
+    style AE fill:#f59e0b,stroke:#d97706,color:#fff
+    style AF fill:#10b981,stroke:#059669,color:#fff
+    style P fill:#8b5cf6,stroke:#6d28d9,color:#fff
+    style U fill:#8b5cf6,stroke:#6d28d9,color:#fff
